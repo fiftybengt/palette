@@ -217,7 +217,7 @@ function App() {
               color: pageInk,
             }}
           >
-            Five ways to color the page.
+            Palette
           </h1>
           <p
             style={{
@@ -228,9 +228,7 @@ function App() {
               lineHeight: 1.55,
             }}
           >
-            The same twelve tokens, retuned five times. Click any swatch or
-            hex value to copy. Toggle theme or cycle palettes from the
-            Tweaks panel.
+            Bunch of palettes, click to copy, darkmode toggle
           </p>
         </div>
 
