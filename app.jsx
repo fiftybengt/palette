@@ -298,6 +298,37 @@ function App() {
         <span>{PALETTES.length} systems · 12 tokens each</span>
       </footer>
 
+      {/* Floating dark mode toggle */}
+      <button
+        type="button"
+        onClick={() => setTweak("mode", mode === "dark" ? "light" : "dark")}
+        title={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        style={{
+          position: "fixed",
+          right: 24,
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 50,
+          background: mode === "dark" ? "#2a2620" : "#ffffff",
+          color: pageInk,
+          border: `1px solid ${pageLine}`,
+          width: 44,
+          height: 44,
+          borderRadius: "50%",
+          fontSize: 18,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: mode === "dark"
+            ? "0 4px 16px rgba(0,0,0,0.5)"
+            : "0 4px 16px rgba(60,40,10,0.14)",
+          transition: "background 280ms ease, border-color 280ms ease, box-shadow 280ms ease",
+        }}
+      >
+        {mode === "dark" ? "☼" : "☾"}
+      </button>
+
       {/* Copy toast */}
       {toast && (
         <div
